@@ -9,6 +9,7 @@ const app = express()
 const port = PORT || 3000
 
 app.use(express.json());
+console.log('CORS', FRONT_APP_URL);
 app.use(cors({
   origin: FRONT_APP_URL
 }));
