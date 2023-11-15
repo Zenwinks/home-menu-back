@@ -13,6 +13,11 @@ console.log('CORS', FRONT_APP_URL);
 app.use(cors({
   origin: FRONT_APP_URL
 }));
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 require('./routes/auth')(app)
 require('./routes/categories')(app)
