@@ -20,7 +20,7 @@ require('./routes/drinks')(app)
 require('./routes/ingredients')(app)
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('Hello World I love potatoes!')
 })
 
 app.listen(port, () => {
