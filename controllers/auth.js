@@ -26,3 +26,7 @@ module.exports.signIn = (req, res) => {
     res.status(400).send(`Error auth signIn: ${error.message}`)
   }
 }
+
+module.exports.getMe = (req, res) => {
+  res.status(200).json('Connected!');
+}
